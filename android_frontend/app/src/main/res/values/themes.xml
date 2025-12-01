@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.OceanProCalculator" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
+        <item name="android:buttonStyle">@style/CalcKeyBase</item>
+    </style>
+</resources>

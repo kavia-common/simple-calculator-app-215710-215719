@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Display Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@drawable/bg_surface_card"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/textMuted"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:gravity="end"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Keypad + Operators -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Keypad Grid -->
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+
+            <Button android:id="@+id/btn7" style="@style/CalcKey" android:text="7"/>
+            <Button android:id="@+id/btn8" style="@style/CalcKey" android:text="8"/>
+            <Button android:id="@+id/btn9" style="@style/CalcKey" android:text="9"/>
+
+            <Button android:id="@+id/btn4" style="@style/CalcKey" android:text="4"/>
+            <Button android:id="@+id/btn5" style="@style/CalcKey" android:text="5"/>
+            <Button android:id="@+id/btn6" style="@style/CalcKey" android:text="6"/>
+
+            <Button android:id="@+id/btn1" style="@style/CalcKey" android:text="1"/>
+            <Button android:id="@+id/btn2" style="@style/CalcKey" android:text="2"/>
+            <Button android:id="@+id/btn3" style="@style/CalcKey" android:text="3"/>
+
+            <Button android:id="@+id/btn0" style="@style/CalcKeyWide" android:text="0"/>
+            <Button android:id="@+id/btnDot" style="@style/CalcKey" android:text="."/>
+        </GridLayout>
+
+        <!-- Operator Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button android:id="@+id/btnClear" style="@style/OpKeySecondary" android:text="C"/>
+            <ImageButton
+                android:id="@+id/btnBackspace"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_key"
+                android:src="@android:drawable/ic_input_delete"
+                android:contentDescription="Backspace"
+                android:tint="@color/textColor"
+                android:layout_marginTop="8dp"/>
+
+            <Button android:id="@+id/btnDiv" style="@style/OpKey" android:text="÷"/>
+            <Button android:id="@+id/btnMul" style="@style/OpKey" android:text="×"/>
+            <Button android:id="@+id/btnSub" style="@style/OpKey" android:text="-"/>
+            <Button android:id="@+id/btnAdd" style="@style/OpKey" android:text="+"/>
+            <Button android:id="@+id/btnEquals" style="@style/OpKeyPrimary" android:text="="/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
