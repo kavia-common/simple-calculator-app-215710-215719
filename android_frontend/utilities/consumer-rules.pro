@@ -1,0 +1,1 @@
+// Keep consumer rules empty

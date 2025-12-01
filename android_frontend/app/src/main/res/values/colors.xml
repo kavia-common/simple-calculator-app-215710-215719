@@ -1,4 +1,5 @@
 <resources>
+    <!-- Ocean Professional palette -->
     <color name="primaryColor">#2563EB</color>
     <color name="secondaryColor">#F59E0B</color>
     <color name="errorColor">#EF4444</color>

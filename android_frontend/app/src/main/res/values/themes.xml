@@ -1,7 +1,10 @@
 <resources>
+    <!-- PUBLIC_INTERFACE -->
     <style name="Theme.OceanProCalculator" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- App global colors consistent with Ocean Professional theme -->
         <item name="android:colorBackground">@color/backgroundColor</item>
         <item name="android:textColorPrimary">@color/textColor</item>
+        <!-- Provide default button style to keep UI consistent -->
         <item name="android:buttonStyle">@style/CalcKeyBase</item>
     </style>
 </resources>
